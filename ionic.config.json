@@ -1,0 +1,7 @@
+{
+  "name": "GraphicGitHubApiSearch",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
