@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+
+	<ion-toolbar>
+
+		<ion-title>home</ion-title>
+
+	</ion-toolbar>
+
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+	<!--<ion-header collapse="condense">-->
+
+		<app-search-bar (search)="onSearch($event)"></app-search-bar>
+
+		<app-profile-card *ngFor="let profile of profiles" [profile]="profile"></app-profile-card>
+
+	<!--</ion-header>-->
+
+</ion-content>

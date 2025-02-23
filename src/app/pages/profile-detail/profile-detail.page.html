@@ -1,0 +1,12 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>{{profile.getName()}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <app-profile-card *ngIf="profile" [profile]="profile"></app-profile-card>
+  <app-repo-list [repos]="repos"></app-repo-list>
+
+</ion-content>
