@@ -16,7 +16,7 @@
 
 		<p>Repos: {{ profile.getRepos().length || 0 }}</p>
 
-		<ion-button [routerLink]="['/profile-detail', profile.getURL()]">Ver Perfil</ion-button>
+		<ion-button (click)="goToProfile(profile.getName())">Ver Perfil</ion-button>
 
 	</ion-card-content>
 

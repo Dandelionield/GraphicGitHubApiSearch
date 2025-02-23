@@ -23,18 +23,27 @@ import {GitHubRepository} from '@entities/GitHubRepository';
 		private route: ActivatedRoute,
 		private http: HttpService
 
-	) {}
+	){}
 
 	ngOnInit(){
 
-		const profilename = this.route.snapshot.paramMap.get('username');
+		this.route.paramMap.subscribe(params => {
+
+			const profilename = params.get('username') || '';
+			this.loadprofile(profilename!);
+			this.loadRepos(profilename!);
+
+		});
+
+		/*const profilename = this.route.snapshot.paramMap.get('username');
 		this.loadprofile(profilename!);
-		this.loadRepos(profilename!);
+		this.loadRepos(profilename!);/**/
 
 	}
 
 	private loadprofile(profilename: string){
 
+		console.log("profile");
         this.http.get<GitHubProfile<GitHubRepository>>(
 
             environment.githubApi.endpoints.profile.replace(':username', profilename)
@@ -45,6 +54,7 @@ import {GitHubRepository} from '@entities/GitHubRepository';
 
     private loadRepos(profilename: string){
 
+		console.log("repos");
         this.http.get<Array<GitHubRepository>>(
 
             environment.githubApi.endpoints.repos.replace(':username', profilename)
