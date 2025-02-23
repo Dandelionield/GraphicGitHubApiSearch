@@ -1,0 +1,14 @@
+<ion-list>
+
+	<ion-item *ngFor="let repo of repos">
+
+		<ion-label>
+
+			<h2>{{ repo.getName() }}</h2>
+			<p>{{ repo.getDescription() || 'Sin descripción' }}</p>
+
+		</ion-label>
+
+	</ion-item>
+
+</ion-list>

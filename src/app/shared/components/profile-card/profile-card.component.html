@@ -1,0 +1,23 @@
+<ion-card>
+
+	<ion-card-header>
+
+		<ion-avatar slot="start">
+
+			<img [src]="profile.getAvatar()" [alt]="profile.getName()">
+
+		</ion-avatar>
+
+		<ion-card-title>{{profile.getName()}}</ion-card-title>
+
+	</ion-card-header>
+
+	<ion-card-content>
+
+		<p>Repos: {{ profile.getRepos().length || 0 }}</p>
+
+		<ion-button [routerLink]="['/profile-detail', profile.getURL()]">Ver Perfil</ion-button>
+
+	</ion-card-content>
+
+</ion-card>
