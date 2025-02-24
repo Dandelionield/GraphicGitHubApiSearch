@@ -1,10 +1,11 @@
-# GitHub Profile Manager 🚀
+# Graphic GitHub Api Search 🚀
 
-A web application for searching and managing GitHub profiles with the following features:  
-- User search functionality  
-- Detailed profile visualization  
-- Repository listing  
-- Customizable display preferences  
+A cross-platform mobile application built with Ionic for searching GitHub profiles. Features include:
+
+- 🕵️ User search functionality
+- 👤 Profile visualization
+- 📂 Repository listing
+- ⚙️ Settings persistence using Ionic Storage
 
 ![Screenshot - Home](assets/screenshots/home.png)  
 ![Screenshot - Profile Details](assets/screenshots/profile-detail.png)  
@@ -13,24 +14,17 @@ A web application for searching and managing GitHub profiles with the following 
 ## 🛠 Installation & Setup
 
 **Prerequisites**:  
-- Node.js v16+  
-- npm v8+  
-- Angular CLI v15+  
+- Node.js v16+
+- npm v8+
+- Angular CLI v15+
+- Ionic CLI v7+
 
 ```bash
 # 1. Clone repository
-git clone https://github.com/your-username/github-profile-manager.git
+git clone https://github.com/Dandelionield/GraphicGitHubApiSearch.git
 
 # 2. Install dependencies
-npm install
+npm install -g @ionic/cli
 
-# 3. Configure environment variables (create src/environments/environment.ts)
-export const environment = {
-  production: false,
-  githubApiUrl: 'https://api.github.com',
-  // Optional: Add personal token for higher rate limits
-  githubToken: 'YOUR_TOKEN_HERE'
-};
-
-# 4. Start development server
-ng serve
+# 5. Start development server
+ionic serve
