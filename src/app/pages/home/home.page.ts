@@ -38,7 +38,7 @@ import {GitHubRepository} from '@entities/GitHubRepository';
 			environment.githubApi.endpoints.search,{
 				
 				q: query,
-				per_page: 15
+				per_page: environment.itemsPerPage
 
 			}).subscribe((response: any) => {
 

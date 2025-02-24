@@ -22,11 +22,11 @@ import { AppRoutingModule } from './app-routing.module';
 		}),
 		AppRoutingModule,
 		HttpClientModule,
-		IonicStorageModule.forRoot({
+		IonicStorageModule.forRoot(),/*{
 
 			driverOrder: ['localstorage', 'indexeddb']
 
-		}),
+		}),/**/
 		FormsModule
 
 	],

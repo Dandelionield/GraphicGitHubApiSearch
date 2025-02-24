@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Storage} from '@ionic/storage-angular';
+//import {Storage} from '@ionic/storage-angular';
+import {environment} from '@environments/environment';
 
 @Component({
 
@@ -10,9 +11,9 @@ import {Storage} from '@ionic/storage-angular';
 
 }) export class SettingsPage implements OnInit {
 
-	itemsPerPage: number = 15;
+	itemsPerPage: number = environment.itemsPerPage;
 
-	constructor(private storage: Storage){
+	constructor(){
 
 		this.initStorage();
 
@@ -22,20 +23,20 @@ import {Storage} from '@ionic/storage-angular';
 
 	async initStorage(){
 
-		await this.storage.create();
 		await this.loadSettings();
 
 	}
 
 	async loadSettings() {
 
-		this.itemsPerPage = await this.storage.get('itemsPerPage') || 10;
+		this.itemsPerPage = environment.itemsPerPage;
 
 	}
 
-	async saveItemsPerPage(){
+	async saveItemsPerPage(event: any){
 
-		await this.storage.set('itemsPerPage', this.itemsPerPage);
+		environment.itemsPerPage = event.target.value;
+		this.itemsPerPage = environment.itemsPerPage;
 
 	}
 
