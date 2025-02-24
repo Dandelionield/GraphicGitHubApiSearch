@@ -27,12 +27,11 @@ import { GitHubRepository } from '@entities/GitHubRepository';
 			environment.githubApi.endpoints.search,{
 				
 				q: query,
-				per_page: 5
+				per_page: 15
 
 			}).subscribe((response: any) => {
 
 				this.profiles = response;
-				//console.log(response);
 
 			});
 

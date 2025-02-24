@@ -2,11 +2,11 @@
 
 	<ion-card-header>
 
-		<ion-avatar slot="start">
+		<div class="custom-avatar">
 
-			<img [src]="profile.getAvatar()" [alt]="profile.getName()">
+		  <img [src]="profile.getAvatar()" [alt]="profile.getName()">
 
-		</ion-avatar>
+		</div>
 
 		<ion-card-title>{{profile.getName()}}</ion-card-title>
 
@@ -16,7 +16,7 @@
 
 		<p>Repos: {{ profile.getRepos().length || 0 }}</p>
 
-		<ion-button (click)="goToProfile(profile.getName())">Ver Perfil</ion-button>
+		<ion-button [routerLink]="['/profile-detail', profile.getName()]">Ver Repos</ion-button>
 
 	</ion-card-content>
 

@@ -16,7 +16,7 @@ import {GitHubRepository} from '@entities/GitHubRepository';
 }) export class ProfileDetailPage implements OnInit{
 
 	profile!: GitHubProfile<GitHubRepository>;
-	repos: Array<GitHubRepository> = [];
+	//repos: Array<GitHubRepository> = [];
 
 	constructor(
 
@@ -28,38 +28,37 @@ import {GitHubRepository} from '@entities/GitHubRepository';
 	ngOnInit(){
 
 		this.route.paramMap.subscribe(params => {
-
+			//this.route.snapshot.paramMap.get('username');//
 			const profilename = params.get('username') || '';
-			this.loadprofile(profilename!);
+			this.loadProfile(profilename!);
 			this.loadRepos(profilename!);
 
 		});
 
-		/*const profilename = this.route.snapshot.paramMap.get('username');
-		this.loadprofile(profilename!);
-		this.loadRepos(profilename!);/**/
-
 	}
 
-	private loadprofile(profilename: string){
+	private loadProfile(profilename: string){
 
-		console.log("profile");
         this.http.get<GitHubProfile<GitHubRepository>>(
 
             environment.githubApi.endpoints.profile.replace(':username', profilename)
 
-        ).subscribe(profile => this.profile = profile);
+        ).subscribe(profile => {
+
+			this.profile = profile;
+			//this.loadRepos(profilename);
+
+		});
 
     }
 
     private loadRepos(profilename: string){
 
-		console.log("repos");
         this.http.get<Array<GitHubRepository>>(
 
             environment.githubApi.endpoints.repos.replace(':username', profilename)
 
-        ).subscribe(repos => this.repos = repos);
+        ).subscribe(repos => this.profile.setRepos(repos));
 
     }
 

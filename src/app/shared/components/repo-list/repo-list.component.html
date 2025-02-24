@@ -5,7 +5,11 @@
 		<ion-label>
 
 			<h2>{{ repo.getName() }}</h2>
-			<p>{{ repo.getDescription() || 'Sin descripción' }}</p>
+			<p [class.empty-description]="!repo.getDescription()">
+
+				{{ repo.getDescription() || 'Sin descripción' }}
+
+			</p>
 
 		</ion-label>
 

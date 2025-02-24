@@ -8,14 +8,38 @@
 
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<!--<ion-content [fullscreen]="true">
 
-	<!--<ion-header collapse="condense">-->
+	<!--<ion-header collapse="condense">--
 
 		<app-search-bar (search)="onSearch($event)"></app-search-bar>
 
 		<app-profile-card *ngFor="let profile of profiles" [profile]="profile"></app-profile-card>
 
-	<!--</ion-header>-->
+	<!--</ion-header>--
+
+</ion-content>-->
+
+<ion-content [fullscreen]="true">
+
+	<div class="content-wrapper">
+
+		<app-search-bar (search)="onSearch($event)"></app-search-bar>
+		
+		<div class="grid-container">
+
+			<app-profile-card *ngFor="let profile of profiles; let i = index" [profile]="profile"></app-profile-card>
+
+		</div>
+
+		<div class="empty-state" *ngIf="!profiles.length">
+
+			<ion-icon name="search-outline"></ion-icon>
+
+			<p>No se encontraron perfiles</p>
+
+		</div>
+
+	</div>
 
 </ion-content>

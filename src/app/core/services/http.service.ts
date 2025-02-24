@@ -28,21 +28,40 @@ import {map} from 'rxjs/operators';
 
     private mapResponse<T>(endpoint: string, data: any): T{
 
-		console.log(data);
-
         if (endpoint.includes('/users') && !endpoint.includes('/repos')){
 
-			//console.log(data.items);
+			let p: any;
 
-			let p: any = [];
+			if (data.items!==undefined){
 
-			data.items.forEach((profile:any) => {
+				p = [];
 
-				p.push(new GitHubProfile({
+				data.items.forEach((profile:any) => {
 
-					login: profile.login,
-					avatar_url: profile.avatar_url,
-					html_url: profile.html_url,
+					p.push(new GitHubProfile({
+
+						login: profile.login,
+						avatar_url: profile.avatar_url,
+						html_url: profile.html_url,
+						repos: data.repos ? data.repos.map((repo: any) => new GitHubRepository({
+
+							name: repo.name,
+							description: repo.description,
+							html_url: repo.html_url
+
+						})) : []
+
+					}) as unknown as T);
+
+				});
+
+			}else{
+
+				p = new GitHubProfile({
+
+					login: data.login,
+					avatar_url: data.avatar_url,
+					html_url: data.html_url,
 					repos: data.repos ? data.repos.map((repo: any) => new GitHubRepository({
 
 						name: repo.name,
@@ -51,11 +70,9 @@ import {map} from 'rxjs/operators';
 
 					})) : []
 
-				}) as unknown as T);
+				}) as unknown as T;
 
-			});/**/
-
-			console.log(p);
+			}
 
 			return p;
 
@@ -64,8 +81,6 @@ import {map} from 'rxjs/operators';
         if (endpoint.includes('/repos')){
 
 			let p: any = [];
-
-			console.log(data);
 
 			data.forEach((repo:any) =>{
 
@@ -78,8 +93,6 @@ import {map} from 'rxjs/operators';
 				}))as unknown as T;
 
 			});
-
-			console.log(p);
 
             return p;
 

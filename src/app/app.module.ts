@@ -14,7 +14,11 @@ import { AppRoutingModule } from './app-routing.module';
 	imports: [
 
 		BrowserModule,
-		IonicModule.forRoot(),
+		IonicModule.forRoot({
+
+			mode: 'md' // ios | md
+
+		}),
 		AppRoutingModule,
 		HttpClientModule
 

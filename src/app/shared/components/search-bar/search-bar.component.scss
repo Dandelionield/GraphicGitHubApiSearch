@@ -1,0 +1,103 @@
+
+ion-searchbar{
+
+	--background: #f5f5f5;
+	--border-radius: 30px;
+	--box-shadow: none;
+	--color: #2d3436;
+	--icon-color: var(--ion-color-primary);
+	--placeholder-color: #636e72;
+	--placeholder-opacity: 0.8;
+	padding: 0 16px;
+	margin: 20px 0;
+
+	.searchbar-input-container{
+
+		input{
+
+			font-size: 1.1rem;
+			font-weight: 500;
+			padding-left: 15px !important;
+
+		}
+
+	}
+
+	.searchbar-search-icon{
+		
+		width: 22px;
+		height: 22px;
+		left: 12px;
+
+	}
+
+	&:hover{
+
+		--background: #ececec;
+
+	}
+
+	&.searchbar-has-focus{
+
+		--background: #ffffff;
+		--box-shadow: 0 2px 12px rgba(var(--ion-color-primary-rgb), 0.15);
+		transform: scale(1.02);
+
+	}
+
+	.searchbar-clear-button{
+
+		ion-icon{
+
+			color: var(--ion-color-medium);
+			transition: transform 0.2s ease;
+
+			&:hover{
+
+				color: var(--ion-color-danger);
+				transform: scale(1.2);
+
+			}
+
+		}
+
+	}
+
+	@media (max-width: 480px){
+
+		--border-radius: 25px;
+		margin: 15px 0;
+		
+		.searchbar-input-container{
+
+			input{
+
+				font-size: 1rem;
+
+			}
+
+		}
+
+	}
+
+	.searchbar-loading{
+
+		position: absolute;
+		right: 15px;
+		width: 20px;
+		height: 20px;
+		border: 3px solid var(--ion-color-light);
+		border-top-color: var(--ion-color-primary);
+		border-radius: 50%;
+		animation: spin 1s linear infinite;
+
+	}
+
+}
+
+@keyframes spin{
+
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+
+}
