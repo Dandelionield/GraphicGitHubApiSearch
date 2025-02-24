@@ -3,6 +3,8 @@
 [![Ionic Version](https://img.shields.io/badge/Ionic-7.1-blue.svg)](https://ionicframework.com/)
 [![Angular Version](https://img.shields.io/badge/Angular-16.2-red.svg)](https://angular.io/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub Release](https://img.shields.io/github/v/release/Dandelionield/GraphicGitHubApiSearch)](https://github.com/Dandelionield/GraphicGitHubApiSearch/releases)
+[![Version: 0.0.10]
 
 A cross-platform mobile application built with Ionic for searching GitHub profiles. built with **Ionic Framework** and **Angular**. Officially supports Android, iOS, and PWA. Features include:
 
@@ -11,9 +13,9 @@ A cross-platform mobile application built with Ionic for searching GitHub profil
 - 📂 Repository listing
 - ⚙️ Settings persistence using Ionic Storage
 
-![Screenshot - Home](src/app/assets/screenshots/home.png)  
-![Screenshot - Profile Details](src/app/assets/screenshots/profile-detail.png)  
-![Screenshot - Settings](src/app/assets/screenshots/settings.png)  
+![Screenshot - Home](src/assets/screenshots/home.png)  
+![Screenshot - Profile Details](src/assets/screenshots/profile-detail.png)  
+![Screenshot - Settings](src/assets/screenshots/settings.png)  
 
 ## 🛠 Installation & Setup
 
