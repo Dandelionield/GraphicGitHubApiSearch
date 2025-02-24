@@ -1,15 +1,19 @@
 # Graphic GitHub Api Search 🚀
 
-A cross-platform mobile application built with Ionic for searching GitHub profiles. Features include:
+[![Ionic Version](https://img.shields.io/badge/Ionic-7.1-blue.svg)](https://ionicframework.com/)
+[![Angular Version](https://img.shields.io/badge/Angular-16.2-red.svg)](https://angular.io/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+A cross-platform mobile application built with Ionic for searching GitHub profiles. built with **Ionic Framework** and **Angular**. Officially supports Android, iOS, and PWA. Features include:
 
 - 🕵️ User search functionality
 - 👤 Profile visualization
 - 📂 Repository listing
 - ⚙️ Settings persistence using Ionic Storage
 
-![Screenshot - Home](assets/screenshots/home.png)  
-![Screenshot - Profile Details](assets/screenshots/profile-detail.png)  
-![Screenshot - Settings](assets/screenshots/settings.png)  
+![Screenshot - Home](src/app/assets/screenshots/home.png)  
+![Screenshot - Profile Details](src/app/assets/screenshots/profile-detail.png)  
+![Screenshot - Settings](src/app/assets/screenshots/settings.png)  
 
 ## 🛠 Installation & Setup
 
@@ -26,5 +30,8 @@ git clone https://github.com/Dandelionield/GraphicGitHubApiSearch.git
 # 2. Install dependencies
 npm install -g @ionic/cli
 
-# 5. Start development server
+# 3. Browse onto the Repository
+cd GraphicGitHubApiSearch
+
+# 4. Start development server
 ionic serve
