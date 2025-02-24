@@ -11,6 +11,7 @@ import {ProfileDetailPage} from './profile-detail.page';
 		ProfileDetailPageRoutingModule
 
 	],
-	declarations: [ProfileDetailPage]
+	declarations: [ProfileDetailPage],
+	exports: [ProfileDetailPage]
 
 }) export class ProfileDetailPageModule {}

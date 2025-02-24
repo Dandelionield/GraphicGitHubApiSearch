@@ -1,0 +1,49 @@
+ion-button[fill="clear"]{
+
+	--ion-color-base: #5a72d0;
+	--ion-color-contrast: #ffffff;
+	--background-hover: rgba(90, 114, 208, 0.08);
+	--ripple-color: transparent;
+	
+	font-weight: 500;
+	letter-spacing: 0.8px;
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	border-radius: 8px;
+	padding: 8px 16px;
+	margin: 4px;
+	
+	ion-icon{
+
+		color: black;
+		transition: transform 0.3s ease;
+		margin-right: 8px;
+		font-size: 1.4em;
+
+	}
+
+	&:hover{
+
+		background: var(--background-hover);
+		transform: translateX(-4px);
+
+		ion-icon{
+
+			transform: translateX(-2px);
+
+		}
+
+	}
+
+	&:active{
+
+		transform: scale(0.95);
+
+	}
+
+	&:focus{
+
+		box-shadow: 0 0 0 2px rgba(90, 114, 208, 0.3);
+
+	}
+
+}

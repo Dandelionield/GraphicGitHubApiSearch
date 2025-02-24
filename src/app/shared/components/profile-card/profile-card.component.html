@@ -8,13 +8,17 @@
 
 		</div>
 
-		<ion-card-title>{{profile.getName()}}</ion-card-title>
+		<a [href] = "profile.getURL()" target = '_blank'>
+
+			<ion-card-title>{{profile.getName()}}</ion-card-title>
+
+		</a>
 
 	</ion-card-header>
 
 	<ion-card-content>
 
-		<p>Repos: {{ profile.getRepos().length || 0 }}</p>
+		<p *ngIf="profile.getRepos()?.length">Repos: {{ profile.getRepos().length }}</p>
 
 		<ion-button [routerLink]="['/profile-detail', profile.getName()]">Ver Repos</ion-button>
 

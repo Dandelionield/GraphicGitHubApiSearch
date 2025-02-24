@@ -4,7 +4,11 @@
 
 		<ion-label>
 
-			<h2>{{ repo.getName() }}</h2>
+			<a [href] = "repo.getURL()" target = "_blank">
+
+				<h2>{{ repo.getName() }}</h2>
+
+			</a>
 			<p [class.empty-description]="!repo.getDescription()">
 
 				{{ repo.getDescription() || 'Sin descripción' }}

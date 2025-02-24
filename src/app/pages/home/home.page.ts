@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpService} from '@services/http.service';
 import {environment} from '@environments/environment';
-import { SharedModule } from '@shared/shared.module';
-import { GitHubProfile } from '@entities/GitHubProfile';
-import { GitHubRepository } from '@entities/GitHubRepository';
+import {SharedModule} from '@shared/shared.module';
+import {GitHubProfile} from '@entities/GitHubProfile';
+import {GitHubRepository} from '@entities/GitHubRepository';
 
 @Component({
 
@@ -16,11 +16,22 @@ import { GitHubRepository } from '@entities/GitHubRepository';
 
 	profiles: Array<GitHubProfile<GitHubRepository>> = [];
 
+	searchQuery:string = '';
+
 	public constructor(private http: HttpService) {}
 
 	public ngOnInit() {}
 
 	onSearch(query: string){
+
+		this.searchQuery = query.trim();
+    
+		if (this.searchQuery.length===0){
+
+			this.profiles = [];
+			return;
+
+		}
 
 		this.http.get(
 
