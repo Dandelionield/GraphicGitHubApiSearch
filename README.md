@@ -11,28 +11,17 @@ A cross-platform mobile application built with Ionic for searching GitHub profil
 - 📂 Repository listing
 - ⚙️ Settings persistence using Ionic Storage
 
-![Screenshot - Home](src/assets/screenshots/home.png) ![Screenshot - Profile Details](src/assets/screenshots/profile-detail.png) ![Screenshot - Settings](src/assets/screenshots/settings.png)
+#Home Page
 
-<img src="src/assets/screenshots/home.png" style="
+![Screenshot - Home](src/assets/screenshots/home.png)
 
-	width: 50%;
-	height: 50%;
+#Profile Detail page
 
-"/>
+![Screenshot - Profile Details](src/assets/screenshots/profile-detail.png)
 
-<img src="src/assets/screenshots/profile-detail.png" style="
+#Settings page
 
-	width: 50%;
-	height: 50%;
-
-"/>
-
-<img src="src/assets/screenshots/settings.png" style="
-
-	width: 50%;
-	height: 50%;
-
-"/>
+![Screenshot - Settings](src/assets/screenshots/settings.png)
 
 ## 🛠 Installation & Setup
 
