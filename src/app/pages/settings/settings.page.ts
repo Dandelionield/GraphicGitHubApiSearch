@@ -35,7 +35,12 @@ import {environment} from '@environments/environment';
 
 	async saveItemsPerPage(event: any){
 
-		environment.itemsPerPage = event.target.value;
+		let value:number = event.target.valueAsNumber || event.target.value;
+
+        if (value < 5) value = 5;
+        else if (value > 30) value = 30;
+
+		environment.itemsPerPage = value;
 		this.itemsPerPage = environment.itemsPerPage;
 
 	}

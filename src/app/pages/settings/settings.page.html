@@ -23,7 +23,7 @@
 				<ion-input 
 					type="number" 
 					[(ngModel)]="itemsPerPage"
-					(ionChange)="saveItemsPerPage($event)"
+					(ionInput)="saveItemsPerPage($event)"
 					min="5" 
 					max="30"
 				></ion-input>
