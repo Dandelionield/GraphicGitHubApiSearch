@@ -9,7 +9,7 @@ A cross-platform mobile application built with Ionic for searching GitHub profil
 - 🕵️ User search functionality
 - 👤 Profile visualization
 - 📂 Repository listing
-- ⚙️ Settings persistence using Ionic Storage
+- ⚙️ Dinamic settings
 
 ### Home Page
 
